@@ -1,2 +1,13 @@
-apt-get update && apt-get upgrade -y
-apt-get install cups python-cups python-picamera defoma xrdp imagemagick python-dev python-rpi.gpio matchbox-keyboard -y
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install cups python3-cups python3-picamera defoma xrdp imagemagick python3-dev python3-rpi.gpio matchbox-keyboard -y
+
+# add user "pi" to the lpadmin group
+sudo usermod -a -G lpadmin pi
+
+# install gutenprint
+sudo apt-get install printer-driver-gutenprint
+
+# connect printer to USB
+# use localhost:631 to configure printer
+# https://discuss.pixls.us/t/printing-borderless-on-a-canon-selphy-1300/27909
+# possibly the paperformat needs to be manually adjusted to fully fill the photo (incl. the tear-off margins)
