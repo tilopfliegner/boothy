@@ -17,8 +17,8 @@ rm -rf $SRC_DIR
 echo "Creating source directory"
 mkdir $SRC_DIR
 
-echo "Retrieving latest repo: git clone https://github.com/zoroloco/boothy.git " $SRC_DIR
-git clone https://github.com/zoroloco/boothy.git $SRC_DIR
+echo "Retrieving latest repo: git clone https://github.com/tilopfliegner/boothy.git " $SRC_DIR
+git clone https://github.com/tilopfliegner/boothy.git $SRC_DIR
 
 echo "Making run file executable."
 chmod +x $SRC_DIR/run.sh
@@ -30,7 +30,7 @@ ln -s $SRC_DIR/photos /home/pi/Desktop
 
 echo "Making startup script executable"
 chmod +x $SRC_DIR/rpi/etc/init.d/boothyStart.sh
-echo "Moving startup script to /etc/init.d"
-cp $SRC_DIR/rpi/etc/init.d/boothyStart.sh /etc/init.d
-echo "Making boothy run automatically at boot"
-update-rc.d boothyStart.sh defaults
+# echo "Moving startup script to /etc/init.d"
+# cp $SRC_DIR/rpi/etc/init.d/boothyStart.sh /etc/init.d
+# echo "Making boothy run automatically at boot"
+# update-rc.d boothyStart.sh defaults
